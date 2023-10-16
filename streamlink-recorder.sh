@@ -4,6 +4,6 @@
 
 while [ true ]; do
 	Date=$(date +%Y%m%d-%H%M%S)
-	streamlink $streamOptions $apiKey $streamLink $streamQuality -o /home/download/$streamName"-$Date".mkv
+	streamlink --twitch-proxy-playlist=https://eu.luminous.dev,https://lb-eu.cdn-perfprod.com,https://lb-eu2.cdn-perfprod.com $apiKey $streamLink $streamQuality -o /home/download/$streamName"-$Date".mkv
 	sleep 60s
 done
