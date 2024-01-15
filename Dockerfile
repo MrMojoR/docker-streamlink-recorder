@@ -1,7 +1,7 @@
 FROM python:3.12
 LABEL maintainer="lauwarm@mailbox.org"
 
-ENV streamlinkCommit=29741769a88aa71e7eb55f5e3eafa37271ef9d73
+ENV streamlinkCommit=010364de80e3555b293c9fdd8a57e26c79e16751
 ENV PATH "${HOME}/.local/bin:${PATH}"
 
 RUN apt-get update && apt-get install gosu && apt-get install python3-pip -y
@@ -21,7 +21,7 @@ RUN mkdir /home/.config/streamlink/plugins
 #RUN git clone https://github.com/Damianonymous/streamlink-plugins.git
 #RUN cp /streamlink-plugins/*.py /home/plugins/
 
-RUN wget https://github.com/2bc4/streamlink-ttvlol/releases/latest/download/twitch.py
+RUN wget https://github.com/2bc4/streamlink-ttvlol/releases/download/6.5.0-20231216/twitch.py
 RUN cp twitch.py /usr/local/lib/python3.12/site-packages/streamlink/plugins/
 
 COPY ./streamlink-recorder.sh /home/script/ 
