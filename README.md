@@ -14,14 +14,6 @@ To run the Container:
 docker run -v /path/to/vod/folder/:/home/download -e streamLink='' -e streamQuality='' -e streamName='' -e streamOptions='' -e uid='' -e gid='' lauwarm/streamlink-recorder
 ```
 
-Example:
-
-```bash
-docker run -v /home/:/home/download -e streamLink='twitch.tv/twitch' -e streamQuality='best' -e streamName='twitch' -e streamOptions='--twitch-disable-reruns' -e uid='1001' -e gid='1001' lauwarm/streamlink-recorder
-```
-
-## Notes
-
 `/home/download` - the place where the vods will be saved. Mount it to a desired place with `-v` option.
 
 `/home/script` - the place where the scripts are stored. (entrypoint.sh and streamlink-recorder.sh)
