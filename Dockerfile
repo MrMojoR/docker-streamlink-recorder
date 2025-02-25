@@ -10,13 +10,6 @@ RUN pip3 install --upgrade git+https://github.com/streamlink/streamlink.git@${st
 
 RUN  echo 'export PATH="${HOME}/.local/bin:${PATH}"'
 
-RUN mkdir /home/download
-RUN mkdir /home/script
-RUN mkdir /home/plugins
-RUN mkdir /home/.config
-RUN mkdir /home/.config/streamlink
-RUN mkdir /home/.config/streamlink/config
-
 #RUN git clone https://github.com/Damianonymous/streamlink-plugins.git
 #RUN cp /streamlink-plugins/*.py /home/plugins/
 
